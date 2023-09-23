@@ -8,16 +8,18 @@ namespace EmployeeSystemWebAPI.Controllers
     using Microsoft.AspNetCore.Mvc;
     using System;
     using EmployeeSystemWebAPI.Model;
+    using EmployeeSystemWebAPI.Logging;
+
+
 
     /// <summary>
     /// Home Controller
     /// </summary>
-    //[Route("Api/[controller]")]
-    ////[Authorize(Policy = "ShouldbeAuthorizedApp")]
-    //[ApiController]
-    //[TypeFilter(typeof(ExceptionHandlerAttribute))]
+  
     [ApiController]
     [Route("api/[controller]/[action]")]
+    //[Authorize(Policy = "ShouldbeAuthorizedApp")]
+    [TypeFilter(typeof(ExceptionHandlerAttribute))]
     public class HomeController : ControllerBase
         {
             #region Private Variables
